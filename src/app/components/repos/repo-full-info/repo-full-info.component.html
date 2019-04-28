@@ -1,0 +1,8 @@
+<h2><a [href]="repoInfo.html_url">{{ repoInfo.name | uppercase }}</a></h2>
+
+<p>USER(OWNER): {{ repoInfo.owner.login }}</p>
+
+<p>LANGUAGE: {{ repoInfo.language }}</p>
+<p>DESCRIPTION: {{ repoInfo.description }}</p>
+
+<p>WATCHERS: {{ repoInfo.watchers_count }}</p>

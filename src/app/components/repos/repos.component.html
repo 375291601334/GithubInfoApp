@@ -1,0 +1,7 @@
+<label for="search">Search:</label>
+<input type="text" [(ngModel)]="searchString" id="search">
+<div class="container">
+  <app-repo-item *ngFor="let repo of (repos | filterPipe: 'name': searchString)"
+  [repo]="repo">
+  </app-repo-item>
+</div>

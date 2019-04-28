@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+label {
+  font-size: 2rem;
+  padding: 0 10px;
+}

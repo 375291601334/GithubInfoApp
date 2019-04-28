@@ -1,0 +1,4 @@
+<div appColors [creationDate]="repo.created_at" (click)="onClick()">
+  <h2>{{ repo.name }}</h2>
+  <p>{{ repo.created_at | date:'MMMM d, y' }}</p>
+</div>

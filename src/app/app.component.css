@@ -1,0 +1,25 @@
+ul {
+  width: 100%;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  margin: 0 20px 0 0;
+  padding: 5px;
+  list-style-type: none;
+  background: pink;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+
+a {
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: grey;
+}
+
+.active {
+  color: red;
+}
