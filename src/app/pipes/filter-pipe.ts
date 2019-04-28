@@ -1,4 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { Subject } from 'rxjs';
+
 @Pipe({
   name: 'filterPipe'
 })

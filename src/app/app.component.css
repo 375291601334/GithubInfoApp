@@ -6,10 +6,10 @@ ul {
 li {
   display: inline-block;
   margin: 0 20px 0 0;
-  padding: 5px;
+  padding: 5px 45px;
   list-style-type: none;
   background: pink;
-  border: 1px solid red;
+  border: 1px solid grey;
   border-radius: 10px;
 }
 

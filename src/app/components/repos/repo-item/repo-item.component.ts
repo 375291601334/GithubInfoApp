@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,13 +6,9 @@ import { Router } from '@angular/router';
   templateUrl: './repo-item.component.html',
   styleUrls: ['./repo-item.component.css']
 })
-export class RepoItemComponent implements OnInit {
+export class RepoItemComponent {
   @Input() repo;
-
   constructor(private router: Router) { }
-
-  ngOnInit() {
-  }
 
   onClick() {
     console.log('click');

@@ -9,7 +9,7 @@ import { ApiService } from '../../services/api.service';
 })
 export class UserInfoComponent implements OnInit {
   constructor(private apiService: ApiService ) { }
-  user = {};
+  user;
 
   ngOnInit() {
     this.apiService.getUser()

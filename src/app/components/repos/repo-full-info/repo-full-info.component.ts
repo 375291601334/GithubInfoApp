@@ -9,7 +9,7 @@ import { ApiService } from '../../../services/api.service';
   providers: [ ApiService ],
 })
 export class RepoFullInfoComponent implements OnInit {
-  repoInfo = {};
+  repoInfo;
   constructor(private apiService: ApiService, public route: ActivatedRoute) { }
 
   ngOnInit() {
