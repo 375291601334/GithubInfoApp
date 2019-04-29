@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-info',
@@ -8,14 +9,18 @@ import { ApiService } from '../../services/api.service';
   providers: [ ApiService ],
 })
 export class UserInfoComponent implements OnInit {
-  constructor(private apiService: ApiService ) { }
+  constructor(private apiService: ApiService,
+    private router: Router ) { }
   user;
 
   ngOnInit() {
     this.apiService.getUser()
-      .subscribe(data => {
-        this.user = data;
-      });
+      .subscribe(
+        data => {
+          this.user = data;
+        },
+        error => {this.router.navigate(["/404"])}
+      );
   }
 
 }

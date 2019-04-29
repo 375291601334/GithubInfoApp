@@ -13,6 +13,7 @@ import { RepoFullInfoComponent } from './components/repos/repo-full-info/repo-fu
 import { ApiService } from './services/api.service';
 import { FilterPipe } from './pipes/filter-pipe';
 import { HttpApiInterceptor } from './interceptors/http-api-interceptor';
+import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpApiInterceptor } from './interceptors/http-api-interceptor';
     ColorsDirective,
     FilterPipe,
     UserInfoComponent,
-    RepoFullInfoComponent
+    RepoFullInfoComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,
