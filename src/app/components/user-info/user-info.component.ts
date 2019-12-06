@@ -9,8 +9,11 @@ import { Router } from '@angular/router';
   providers: [ ApiService ],
 })
 export class UserInfoComponent implements OnInit {
-  constructor(private apiService: ApiService,
-    private router: Router ) { }
+  constructor(
+    private apiService: ApiService,
+    private router: Router,
+  ) { }
+
   user;
 
   ngOnInit() {
@@ -19,7 +22,7 @@ export class UserInfoComponent implements OnInit {
         data => {
           this.user = data;
         },
-        error => {this.router.navigate(["/404"])}
+        error => this.router.navigate(['/404'])
       );
   }
 

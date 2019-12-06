@@ -11,9 +11,11 @@ import { Router } from '@angular/router';
 })
 export class RepoFullInfoComponent implements OnInit {
   repoInfo;
-  constructor(private apiService: ApiService,
+  constructor(
+    private apiService: ApiService,
     public route: ActivatedRoute,
-    private router: Router) { }
+    private router: Router,
+  ) {}
 
   ngOnInit() {
     this.route.params.subscribe(
@@ -23,10 +25,10 @@ export class RepoFullInfoComponent implements OnInit {
           this.repoInfo = data;
           console.log(data);
         },
-        error => {this.router.navigate(["/404"])}
-        )
+        error => this.router.navigate(['/404'])
+        );
       },
-      error => {this.router.navigate(["/404"])}
+      error => this.router.navigate(['/404'])
     );
   }
 

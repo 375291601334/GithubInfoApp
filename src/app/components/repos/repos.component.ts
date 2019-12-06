@@ -12,8 +12,11 @@ import { Router } from '@angular/router';
 })
 
 export class ReposComponent implements OnInit {
-  constructor(private apiService: ApiService,
-    private router: Router ) { }
+  constructor(
+    private apiService: ApiService,
+    private router: Router,
+  ) { }
+
   repos = [];
   searchString = '';
   private subj = new Subject<string>();
@@ -24,14 +27,14 @@ export class ReposComponent implements OnInit {
     .subscribe(text => {
       this.searchString = text;
     },
-    error => {this.router.navigate(["/404"])}
+    error => this.router.navigate(['/404'])
     );
 
     this.apiService.getRepos()
       .subscribe(data => {
         this.repos = data;
       },
-      error => {this.router.navigate(["/404"])}
+      error => this.router.navigate(['/404'])
       );
   }
 

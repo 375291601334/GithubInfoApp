@@ -13,7 +13,7 @@ export class HttpApiInterceptor implements HttpInterceptor {
     const fullReq = req.clone({
       url: `${this.url}${req.url}`
     });
-      return next.handle(fullReq);
+    return next.handle(fullReq);
   }
 
     return next.handle(req);

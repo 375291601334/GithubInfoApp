@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 
 export class ApiService {
-  constructor(private http: HttpClient) { }
-  //private url = 'https://api.github.com/';
+  constructor(private http: HttpClient) {}
+
   private user = '375291601334';
 
   getRepos(): Observable<any> {
@@ -22,5 +22,4 @@ export class ApiService {
   getUser(): Observable<any> {
     return this.http.get<any>(`users/${this.user}`);
   }
-
 }
